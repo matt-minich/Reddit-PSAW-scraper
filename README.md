@@ -1,10 +1,10 @@
 # Reddit-PSAW-scraper
 A simple script that scrapes the Pushshift.io API using PSAW
 
-This script is an adaptation of the <a href: 'https://github.com/matt-minich/Reddit-PRAW-API'>PRAW scraper </a> that can be found in another of my repositories. 
-I also relied on the <a href: 'https://pypi.org/project/psaw/'>official PSAW documentation</a> and guidance from the good people at <a href: 'https://www.reddit.com/r/pushshift/'> r/pushshift.</a>
+This script is an adaptation of the <a href= 'https://github.com/matt-minich/Reddit-PRAW-API'>PRAW scraper </a> that can be found in another of my repositories. 
+I also relied on the <a href= 'https://pypi.org/project/psaw/'>official PSAW documentation</a> and guidance from the good people at <a href = 'https://www.reddit.com/r/pushshift/'> r/pushshift.</a>
 
-This script allows users to scrape data from an unlimited number of Reddit posts from the pushshift API. Details about Pushshift can be found <a href: 'https://www.aaai.org/ojs/index.php/ICWSM/article/view/7347'>here.</a>
+This script allows users to scrape data from an unlimited number of Reddit posts from the pushshift API. Details about Pushshift can be found <a href =  'https://www.aaai.org/ojs/index.php/ICWSM/article/view/7347'>here.</a>
 The user will first need to ented a start date and end date for their search on lines 8 and 9(those dates should be between June of 2005 and April of 2019).
 
 Once run, the script will give prompts asking for a subreddit and a number of posts. The subreddit should be entered without special characters (i.e. 'trees', not 'r/trees').
