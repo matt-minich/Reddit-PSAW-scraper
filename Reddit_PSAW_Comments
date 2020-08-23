@@ -1,0 +1,34 @@
+from psaw import PushshiftAPI
+import csv
+import datetime as dt
+
+
+api = PushshiftAPI()
+
+start_epoch=int(dt.datetime(2018, 1,1).timestamp())
+end_epoch=int(dt.datetime(2018,7,1).timestamp())
+
+subreddit = input('Which subreddit would you like to scrape? ')
+
+
+with open('D:/CAMER/%sCommentsOne.csv' % subreddit, 'w', encoding='utf-8') as csvfile:
+    fieldnames = ['id','created_utc','link_id','parent_id','author','body','score','stickied','permalink']
+    filewriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    filewriter.writeheader()
+
+    for i in api.search_comments(after=start_epoch,
+                                    before=end_epoch,
+                                    subreddit=subreddit,
+                                    limit=None):
+
+        filewriter.writerow({'id': i.id,
+                             'created_utc': i.created_utc,
+                             'link_id': i.link_id,
+                            'parent_id': i.parent_id,
+                            'author': i.author,
+                            'body': i.body,
+                            'score': i.score,
+                            'stickied': i.stickied,
+                            'permalink': i.permalink})
+
+print ('We did it!')
